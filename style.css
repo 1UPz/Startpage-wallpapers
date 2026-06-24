@@ -10,37 +10,34 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Cor de fundo padrão enquanto a imagem carrega */
+    background-color: #121212;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 0.5s ease-in-out;
 }
 
-/* Container da pesquisa centralizada */
+/* Container da pesquisa */
 .search-container {
     width: 100%;
-    max-width: 550px;
+    max-width: 500px; /* Ajuste a largura conforme preferir */
     padding: 0 20px;
 }
 
 form {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1); /* Transparência da caixa */
-    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    padding: 10px 20px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    transition: all 0.3s ease;
+    background: transparent; /* Remove qualquer fundo */
+    border: none;
+    /* Cria a linha branca fina abaixo do campo */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8); 
+    padding: 8px 0;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
 }
 
+/* Efeito ao clicar/digitar no campo */
 form:focus-within {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 1); /* Linha fica totalmente acesa */
 }
 
 input {
@@ -48,26 +45,14 @@ input {
     background: transparent;
     border: none;
     outline: none;
-    font-size: 18px;
-    color: #ffffff;
-    padding-right: 10px;
+    font-size: 24px; /* Tamanho de fonte maior para o estilo minimalista */
+    font-weight: 300; /* Texto mais fino */
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center; /* Centraliza o texto de pesquisa igual à imagem */
+    letter-spacing: 0.5px;
 }
 
+/* Estilização do texto "Type to search" */
 input::placeholder {
     color: rgba(255, 255, 255, 0.6);
-}
-
-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.8;
-    transition: opacity 0.2s;
-}
-
-button:hover {
-    opacity: 1;
 }
