@@ -18,6 +18,8 @@ body {
 
 /* Container da pesquisa */
 .search-container {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
     width: 100%;
     max-width: 500px; /* Ajuste a largura conforme preferir */
     padding: 0 20px;
